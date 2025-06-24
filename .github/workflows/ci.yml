@@ -36,11 +36,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/recommendation:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/recommendationservice:latest .
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/recommendation:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/recommendationservice:latest
 
     - name: Check Dockerfile
       run: test -f Dockerfile || (echo "Dockerfile not found!" && exit 1)
