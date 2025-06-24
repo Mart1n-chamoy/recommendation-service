@@ -41,3 +41,7 @@ jobs:
     - name: Push Docker image
       run: |
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/recommendation:latest
+
+    - name: Check Dockerfile
+      run: test -f Dockerfile || (echo "Dockerfile not found!" && exit 1)
+
