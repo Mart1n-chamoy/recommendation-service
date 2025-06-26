@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: recommendationservice
-          image: mart1n-chamoy/recommendationservice:latest
+          image: martin555/recommendationservice:latest
           ports:
             - containerPort: 8080
